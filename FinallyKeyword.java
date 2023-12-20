@@ -1,4 +1,4 @@
-class fina
+class finallyKeyword
 {
 	public static void main(String arg[])
 	{
