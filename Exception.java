@@ -18,8 +18,8 @@ class demo
 {
 	public static void main(String args [])
 	{
-	Exception a = new Exception();
-	a.rec(33);
+		Exception a = new Exception();
+		a.rec(33);
 	}
 
 } 
