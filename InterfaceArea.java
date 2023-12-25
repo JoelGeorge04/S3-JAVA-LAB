@@ -1,10 +1,10 @@
 import java.util.Scanner;
-interface area
+interface Area
 {
 	double pi = 3.14;
 	void calc_area();
 }
-class triangle implements area
+class triangle implements Area
 {
 	public void calc_area()
 	{
@@ -20,7 +20,7 @@ class triangle implements area
 		System.out.println("the area is "+area);
 	}
 }
-class circle implements area
+class circle implements Area
 {
 	public void calc_area()
 	{
@@ -33,7 +33,7 @@ class circle implements area
 		System.out.println("the area is "+area);
 	}
 }
-class rectangle implements area
+class rectangle implements Area
 {
 	public void calc_area()
 	{
