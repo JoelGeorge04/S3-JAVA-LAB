@@ -1,73 +1,53 @@
-import java.util.Scanner;
-
-abstract class area
-{
-	abstract void area();
-}
-
-class circle extends area
-{
-	void area()
-	{
-		Scanner s = new Scanner(System.in);
-		double r;
-		double area;
-		double pi = 3.14;
-		System.out.println("Enter the radius of the circle: ");
-		r = s.nextInt();
-		area = pi*r*r;
-		System.out.println("the area is "+area);
+import java.util.Arrays;
+	import java.util.Scanner;
+	
+	class QuickSort {
+		private static Scanner sc;
+	
+		public static void main(String args[]) {
+			sc = new Scanner(System.in);
+	
+			System.out.println("Enter no of terms");
+			int n = sc.nextInt();
+	
+			System.out.println("Enter the terms");
+			int arr[] = new int[n];
+			for (int i = 0; i < n; i++)
+				arr[i] = sc.nextInt();
+	
+			System.out.println("The unsorted array is:");
+			System.out.println(Arrays.toString(arr));
+	
+			sort(arr, 0, arr.length - 1);
+	
+			System.out.println("The sorted array is:");
+			System.out.println(Arrays.toString(arr));
+		}
+	
+		static void sort(int arr[], int start, int end) {
+			if (start < end) {
+				int pIndex = partition(arr, start, end);
+				sort(arr, start, pIndex - 1);
+				sort(arr, pIndex + 1, end);
+			}
+		}
+	
+		static int partition(int arr[], int start, int end) {
+			int pivot = arr[end];
+			int pIndex = start;
+			for (int i = start; i < end; i++) {
+				if (arr[i] <= pivot) {
+					swap(arr, i, pIndex);
+					pIndex++;
+				}
+			}
+			swap(arr, pIndex, end);
+			return pIndex;
+		}
+	
+		static void swap(int arr[], int x, int y) {
+			int temp = arr[x];
+			arr[x] = arr[y];
+			arr[y] = temp;
+		}
 	}
-}
-
-class triangle extends area
-{
-	void area()
-	{
-		Scanner s = new Scanner(System.in);
-		double height;
-		double base;
-		double area;
-		System.out.println("Enter the length of the triangle: ");
-		height = s.nextInt();
-		System.out.println("Enter the base of the triangle: ");
-		base = s.nextInt();
-		area = 0.5*base*height;
-		System.out.println("the area is "+area);
-	}
-}
-
-class rectangle extends area
-{
-	void area()
-	{
-		Scanner s = new Scanner(System.in);
-		double length;
-		double base;
-		double area;
-		System.out.println("Enter the length of the rectangle: ");
-		length = s.nextInt();
-		System.out.println("Enter the base of the rectangle: ");
-		base = s.nextInt();
-		area = length*base;
-		System.out.println("the area is "+area);
-	}
-}
-
-class arearuntime
-{
-	public static void main(String args[])
-	{
-		Scanner s = new Scanner(System.in);
-		area ref;
-		circle a1 = new circle();
-		triangle a2 = new triangle();
-		rectangle a3 = new rectangle();
-		ref = a1;
-		ref.area();
-		ref = a2;
-		ref.area();
-		ref = a3;
-		ref.area();
-	}
-}
