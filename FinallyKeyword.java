@@ -9,7 +9,7 @@ class finallyKeyword
 			int c;
 			c=a/b;
 			System.out.println(c);
-		}
+		
 		finally
 		{
 			System.out.println("Finally block"); //will ne executed anyway. 
