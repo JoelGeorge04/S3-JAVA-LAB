@@ -14,7 +14,7 @@ public class Frame
 		f.add(j2);	
 		f.add(jlab);
 		f.add(f1);
-			f.add(f2);	
+		f.add(f2);	
 		String str=f1.getText();
 		System.out.println("String is:"+str);
 		f2.setText(str);			
