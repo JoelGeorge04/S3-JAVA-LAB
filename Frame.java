@@ -16,8 +16,8 @@ public class Frame
 		f.add(f1);
 		f.add(f2);	
 		String str=f1.getText();
-		System.out.println("String is:"+str);
 		f2.setText(str);			
+		System.out.println("String is:"+str);
 		f.setVisible(true);
 		f.setLayout(new FlowLayout());
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
