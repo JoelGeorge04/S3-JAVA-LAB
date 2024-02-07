@@ -9,14 +9,18 @@ class MyFile
             do {
                 i = fin.read();
                 ch = (char) i;
-                if (i != -1) {
-                    if (ch == '\n' | ch == ' ') {
+                if (i != -1)
+                {
+                    if (ch == '\n' | ch == ' ') 
+                    {
                         wordcount++;
                     }
-                    if (ch == '\n') {
+                    if (ch == '\n') 
+                    {
                         linecount++;
                     }
-                    if (ch >= 'a' & ch <= 'z' | ch >= 'A' & ch <= 'Z') {
+                    if (ch >= 'a' & ch <= 'z' | ch >= 'A' & ch <= 'Z') 
+                    {
                         charcount++;
                     }
                 }
