@@ -10,7 +10,7 @@ class Fibonacci
         System.out.println("Fibonacci Series ==>>");
         System.out.println();
         System.out.print(a+" "+b+" ");
-        for(i=3;i<=n;i++)
+        for(i=2;i<n;i++)
         {
             c=a+b;
             System.out.print(c +" ");
