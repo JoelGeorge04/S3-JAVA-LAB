@@ -25,7 +25,7 @@ class Main{
             }
         }
         if(flag==0){
-            System.out.println("Not possible to get the numbers");
+            System.out.println("Not possible to get the numbers--");
         }
     }
 }
